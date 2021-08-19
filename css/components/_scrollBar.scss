@@ -1,0 +1,13 @@
+::-webkit-scrollbar-thumb {
+    appearance: none;
+    background-color: $brand;
+    opacity: 0.5;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    cursor: default;
+}
+::-webkit-scrollbar {
+    background-color: $color;
+    cursor: default;
+}

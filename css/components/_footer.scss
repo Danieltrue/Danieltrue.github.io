@@ -1,0 +1,12 @@
+footer {
+    height: 20vh;
+    background-color: $brand;
+    @extend .flex;
+
+    p {
+        font-size: 60%;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+}

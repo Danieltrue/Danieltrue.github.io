@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-weight: 300;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  cursor: pointer;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+.row {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.flex, header .container, header .container > nav, header .container > nav .email .circle, header .container > nav .email .circle-inner, header .container > nav .nav-list ul, header .container .head-text, header .container .head-text .head-btn button, header .container .description, section.work .service-des .ser-4 button, .magnificent, .magnificent .disable-anime button, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.deck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.h2, section.work .service h2, .skill .container .skill-text {
+  font-family: "Poiret One", cursive;
+  width: 120px;
+  font-size: 150%;
+}
+
+.h2::after, section.work .service h2::after, .skill .container .skill-text::after {
+  content: "";
+  display: block;
+  width: 100px;
+  margin-top: 1rem;
+  background-color: #000;
+  height: 1px;
+}
+
+header {
+  height: 100vh;
+  background-color: #000;
+  cursor: default;
+}
+
+header a {
+  color: #fff;
+}
+
+header .container {
+  height: 100%;
+  padding: 1rem;
+  position: relative;
+}
+
+header .container .menu {
+  display: none;
+}
+
+header .container > nav {
+  font-size: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+header .container > nav .hamburger {
+  display: none;
+}
+
+header .container > nav .email .circle p {
+  font-size: 80%;
+}
+
+header .container > nav .email .circle a {
+  color: #fff;
+}
+
+header .container > nav .email .circle-inner {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+header .container > nav .nav-list {
+  cursor: pointer;
+}
+
+header .container > nav .nav-list ul {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header .container > nav .nav-list ul li {
+  margin-left: 1rem;
+  padding: 0.5rem 0;
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+}
+
+header .container > nav .nav-list ul li {
+  border-bottom: 1px solid transparent;
+}
+
+header .container > nav .nav-list ul li:first-of-type {
+  border-bottom: 1px solid #fff;
+}
+
+header .container > nav .nav-list ul li:hover {
+  border-bottom: 1px solid #fff;
+}
+
+header .container > nav .nav-list ul li a {
+  color: #fff;
+}
+
+header .container .head-text {
+  height: 60%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+header .container .head-text .image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+header .container .head-text .image img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+header .container .head-text > p {
+  font-size: 70%;
+}
+
+header .container .head-text .address {
+  text-align: center;
+  font-family: "Poiret One", cursive;
+  font-size: 150%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+header .container .head-text .head-btn {
+  margin-top: 1rem;
+}
+
+header .container .head-text .head-btn button {
+  width: 120px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  font-size: 65%;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+header .container .head-text .head-btn button a {
+  color: #000;
+}
+
+header .container .description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  font-size: 50%;
+}
+
+header .container .description i {
+  margin-right: 0.5rem;
+  font-size: 120%;
+}
+
+header .container .description p {
+  text-align: right;
+  line-height: 190%;
+  width: 250px;
+}
+
+@media screen and (max-width: 482px) {
+  header > .container > nav.show {
+    background-color: red;
+    position: fixed;
+    z-index: 2;
+  }
+  header nav .nav-list {
+    height: 30px;
+    position: relative;
+  }
+  header nav .nav-list ul.list {
+    display: none;
+  }
+  header nav .nav-list .hamburger {
+    position: absolute;
+    right: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav .nav-list .hamburger div {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+  }
+  header .container aside.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: #fff;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    z-index: 2;
+  }
+  header .container aside.menu ul li {
+    color: #000;
+    margin-top: 1rem;
+    text-align: center;
+    padding: 5px 10px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  header .container aside.menu ul li:first-of-type {
+    background-color: #000;
+  }
+  header .container aside.menu ul li:first-of-type a {
+    color: #fff;
+  }
+  header .container aside.menu ul li a {
+    color: #000;
+  }
+  header .container aside.menu ul li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  header .container aside.menu ul li:hover a {
+    color: #fff;
+  }
+  header .container aside.menu > nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .container aside.menu .hamburger-close {
+    height: 30px;
+    width: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .container aside.menu .hamburger-close div {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  header .container aside.menu .hamburger-close div:first-of-type {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .container aside.menu .hamburger-close div:hover {
+    opacity: 0.5;
+  }
+  header .container aside.menu .hamburger-close div::before {
+    content: "";
+    width: 30px;
+    background-color: #000;
+    height: 2px;
+    display: block;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  header .container aside.menu .menu-footer {
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-weight: 600;
+    font-size: 60%;
+  }
+  header .head-icons {
+    width: 150px;
+  }
+  header .description p {
+    text-align: left;
+  }
+}
+
+section.work {
+  min-height: 100vh;
+  padding: 1rem;
+  color: #000;
+}
+
+section.work .container {
+  height: 100%;
+}
+
+section.work .service {
+  padding: 1rem;
+}
+
+section.work .service-des .ser {
+  height: 180px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+section.work .service-des .ser:first-of-type {
+  margin-top: -0.2rem;
+  margin-bottom: 3rem;
+}
+
+section.work .service-des .ser h2 {
+  font-size: 120%;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: "Raleway", sans-serif;
+}
+
+section.work .service-des .ser p {
+  font-size: 60%;
+  line-height: 180%;
+  letter-spacing: 1px;
+}
+
+section.work .service-des .ser p span {
+  font-weight: bold;
+}
+
+section.work .service-des .ser-2 {
+  margin-bottom: 2em;
+}
+
+section.work .service-des .ser-4 {
+  text-align: center;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+section.work .service-des .ser-4 h2 {
+  font-size: 80%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+section.work .service-des .ser-4 button {
+  width: 120px;
+  height: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  font-size: 65%;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 0.7rem;
+}
+
+section.work .service-des .ser-4 button a {
+  color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  section .service-des {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+  }
+  section .service-des .ser {
+    width: 390px;
+  }
+  section .service-des .ser-3 h2 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section .service-des {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.skill {
+  background-color: #000;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill .container {
+  padding: 1rem;
+}
+
+.skill .container .skill-text {
+  width: 300px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skill .container .skill-text::after {
+  background-color: #fff;
+  width: 60px;
+  margin: 1rem auto;
+}
+
+.skill .container .skill-section {
+  margin-top: 1rem;
+}
+
+.skill .container .skill-section .star {
+  margin-top: 1rem;
+}
+
+.skill .container .skill-section .star .skill-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skill .container .skill-section .star .skill-box .faint {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 2px;
+  margin-top: 1rem;
+  border-radius: 20px;
+  position: relative;
+}
+
+.skill .container .skill-section .star .skill-box .faint .good-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.skill .container .skill-section .star .skill-box p {
+  font-size: 50%;
+  vertical-align: center;
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+}
+
+.skill .container .skill-section .star h5 {
+  font-size: 70%;
+}
+
+.skill .container .skill-section .star.star1 .faint .good-color {
+  width: 40%;
+}
+
+.skill .container .skill-section .star.star3 .faint .good-color {
+  width: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: #000;
+  opacity: 0.5;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: default;
+}
+
+::-webkit-scrollbar {
+  background-color: #fff;
+  cursor: default;
+}
+
+.magnificent {
+  height: 60vh;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.magnificent .visual {
+  height: 100px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+}
+
+.magnificent .visual div {
+  height: 10px;
+  width: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 0.2rem;
+}
+
+.magnificent .disable-anime {
+  position: absolute;
+  bottom: 0;
+}
+
+.magnificent .disable-anime button {
+  margin-top: 1rem;
+  width: 120px;
+  height: 20px;
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  font-size: 65%;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .visual {
+    height: 200px;
+    width: 200px;
+  }
+  .visual div {
+    height: 3px;
+    width: 3px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0.1rem;
+  }
+}
+
+footer {
+  height: 20vh;
+  background-color: #000;
+}
+
+footer p {
+  font-size: 60%;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+/*# sourceMappingURL=app.css.map */

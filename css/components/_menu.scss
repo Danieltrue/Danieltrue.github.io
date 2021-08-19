@@ -1,0 +1,91 @@
+.container {
+    aside.menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+        background-color: $color;
+        transform: translateX(100%);
+        ul {
+            li {
+                &:first-of-type {
+                    background-color: $brand;
+                    a {
+                        color: $color;
+                    }
+                }
+                color: $brand;
+                margin-top: $rem;
+                text-align: center;
+                padding: 5px 10px;
+                transition: all 0.4s;
+                a {
+                    color: $brand;
+                }
+                &:hover {
+                    background-color: $brand;
+                    color: $color;
+                    a {
+                        color: $color;
+                    }
+                }
+            }
+        }
+        z-index: 2;
+        & > nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: $rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .hamburger-close {
+            height: 30px;
+            width: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            div {
+                width: 30px;
+                height: 2px;
+                background-color: $brand;
+                transition: all 0.5s;
+                &:first-of-type {
+                    transform: rotate(45deg);
+                }
+                &:hover {
+                    opacity: 0.5;
+                }
+                &::before {
+                    content: "";
+                    width: 30px;
+                    background-color: $brand;
+                    height: 2px;
+                    display: block;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .menu-footer {
+            color: $brand;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: $rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 60%;
+        }
+    }
+}

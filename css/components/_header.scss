@@ -1,0 +1,190 @@
+header {
+    height: 100vh;
+    background-color: $brand;
+    cursor: default;
+    a {
+        color: $color;
+    }
+    .container {
+        height: 100%;
+        padding: $rem;
+        position: relative;
+        @extend .flex;
+        .menu {
+            display: none;
+        }
+        & > nav {
+            font-size: 60%;
+            @extend .flex;
+            justify-content: space-between;
+            padding: $rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            .hamburger {
+                display: none;
+            }
+
+            .email {
+                .circle {
+                    @extend .flex;
+                    p {
+                        font-size: 80%;
+                    }
+                    a {
+                        color: $color;
+                    }
+                }
+                .circle-inner {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $color;
+                    @extend .flex;
+                    margin-right: 0.5rem;
+                    border-radius: 50%;
+                }
+            }
+            // EMAIL
+            .nav-list {
+                cursor: pointer;
+                ul {
+                    @extend .flex;
+                    transition: all 0.5s;
+                    li {
+                        margin-left: $rem;
+                        padding: 0.5rem 0;
+                        transition: border 0.5s;
+                        & {
+                            border-bottom: 1px solid transparent;
+                        }
+                        &:first-of-type {
+                            border-bottom: 1px solid $color;
+                        }
+                        &:hover {
+                            border-bottom: 1px solid $color;
+                        }
+                        a {
+                            color: $color;
+                        }
+                    }
+                }
+            }
+            // EMAIL
+        }
+
+        // HEAD TEXT
+        .head-text {
+            height: 60%;
+            @extend .flex;
+            flex-direction: column;
+            cursor: pointer;
+            .image {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin-bottom: $rem;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            & > p {
+                font-size: 70%;
+            }
+
+            .address {
+                text-align: center;
+                font-family: $headfont;
+                font-size: 150%;
+                margin-top: $rem;
+                margin-bottom: $rem;
+            }
+
+            .head-btn {
+                margin-top: $rem;
+                button {
+                    width: 120px;
+                    height: 30px;
+                    background-color: $color;
+                    color: $brand;
+                    padding: $rem;
+                    font-size: 65%;
+                    border-radius: 20px;
+                    @extend .flex;
+                    font-weight: bold;
+                    a {
+                        color: $brand;
+                    }
+                }
+            }
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            @extend .flex;
+            justify-content: space-between;
+            padding: $rem;
+            font-size: 50%;
+            i {
+                margin-right: 0.5rem;
+                font-size: 120%;
+            }
+            p {
+                text-align: right;
+                line-height: 190%;
+                width: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 482px) {
+    header {
+        & > .container > nav.show {
+            background-color: red;
+            position: fixed;
+            z-index: 2;
+        }
+        nav {
+            .nav-list {
+                height: 30px;
+                position: relative;
+                ul.list {
+                    display: none;
+                }
+                .hamburger {
+                    position: absolute;
+                    right: 15%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                    div {
+                        width: 20px;
+                        height: 2px;
+                        background-color: $color;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+        @import "./menu";
+        .head-icons {
+            width: 150px;
+        }
+
+        .description p {
+            text-align: left;
+        }
+    }
+}
